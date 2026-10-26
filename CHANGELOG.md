@@ -1,5 +1,169 @@
 # Changelog
 
+## [6.9.0](https://github.com/ismi9/rea/compare/rea-agents-6.8.0...rea-agents-6.9.0) (2026-10-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mcp:** binary_session {} no longer returns analysis_provider_candidates[].availability.diagnostics, target_support.diagnostics or capabilities, or tool_availability group surface, effects and annotations. Pass {"detail": "complete"} to get them.
+
+### Features
+
+* **browser:** retain compact scenario summaries and selected views ([#7120](https://github.com/ismi9/rea/issues/7120)) ([fc43e28](https://github.com/ismi9/rea/commit/fc43e285eaae2155d32e2ca0ab5d2181a4e2f1b5))
+* **mcp:** support compact output schema advertisements ([#7218](https://github.com/ismi9/rea/issues/7218)) ([9085222](https://github.com/ismi9/rea/commit/9085222ca1b5a636d4835a48b8bfed03da461b4f))
+* **native:** make function matching allowance configurable ([#7159](https://github.com/ismi9/rea/issues/7159)) ([b8ce3c7](https://github.com/ismi9/rea/commit/b8ce3c74cd42a74893f890697ef9cb26c21a91a8))
+* **native:** page retained load-image observations ([#7134](https://github.com/ismi9/rea/issues/7134)) ([f69c52a](https://github.com/ismi9/rea/commit/f69c52a1cf3940ed1999fcc0859a75dbb913d684))
+* **native:** page retained observations and source context ([#7146](https://github.com/ismi9/rea/issues/7146)) ([4c8647a](https://github.com/ismi9/rea/commit/4c8647a706694665c881e5d8e3d50bfe70239db7))
+
+
+### Bug Fixes
+
+* **android:** retain selected Java across workspace launches ([1a1121c](https://github.com/ismi9/rea/commit/1a1121c61f3aadfb8541bbbc143560ee6100d25e))
+* **apk:** reuse canonical subject identity in retained views ([d3946a3](https://github.com/ismi9/rea/commit/d3946a3f509e908397cf0274ac10a13ce2b90dd9))
+* **artifacts:** admit raw UDRW disk images ([#7106](https://github.com/ismi9/rea/issues/7106)) ([0eb3919](https://github.com/ismi9/rea/commit/0eb3919d69c98f9f31b3b8b2ee5d389c3df6e828))
+* **artifacts:** retain source identity failures after relocation ([2012efe](https://github.com/ismi9/rea/commit/2012efe5fd95ea3b1c9783b33ce33d6ba00fd412))
+* **browser:** invalidate ASAR headers on file state changes ([38ed5a3](https://github.com/ismi9/rea/commit/38ed5a3142370a735a67c53672bfd65522e6899e))
+* **captures:** preserve relative redirect URL evidence ([99d4ea9](https://github.com/ismi9/rea/commit/99d4ea9c051c378e6bf9ce1a3b1888b8ab54dce7))
+* **captures:** preserve reply failures through descriptor finalization ([dec4cf5](https://github.com/ismi9/rea/commit/dec4cf50cb582988c4811ed8059e8c7e4ced3815))
+* **cli:** preserve script export evidence through shared finalization ([991a240](https://github.com/ismi9/rea/commit/991a2406060ae200ee5db260e486e68c1f5bb4bd))
+* **cli:** report JSON Lines selection refusals as caller errors ([#7124](https://github.com/ismi9/rea/issues/7124)) ([e06be06](https://github.com/ismi9/rea/commit/e06be06530fc214e25f25f357a78d3619f75dd35))
+* **config:** preserve captured environments across provider launches ([3864c7d](https://github.com/ismi9/rea/commit/3864c7d667593c3149ae81861540194a7bf81e99))
+* **doctor:** bound and cancel diagnostic subprocesses ([52976ac](https://github.com/ismi9/rea/commit/52976ac5cdc08c76ca48ae0800b61024e4ae1af8))
+* **doctor:** retain host uncertainty and resolved Java selection ([37a7c2d](https://github.com/ismi9/rea/commit/37a7c2d6522171b2b0e8a52d56459749684ee713))
+* **electron:** share wrapped member identity parsing ([c11fb48](https://github.com/ismi9/rea/commit/c11fb48c98a2d5db58cc9f3ab68c5beca2968835))
+* **environment:** own JSON fields across capture, state and replay ([e54bf10](https://github.com/ismi9/rea/commit/e54bf1006eadd0dfeea5c6c259cc3dc84bb414ec))
+* **evidence:** consolidate retained view and verifier ownership ([7d36d17](https://github.com/ismi9/rea/commit/7d36d172ab9b1718630a8e8646f87e7dfdbfc71a))
+* **evidence:** preserve source and authenticated observation identity ([09acf21](https://github.com/ismi9/rea/commit/09acf217d946c7ca3659abe308896e010e9cc764))
+* **ghidra:** scope rejected-input diagnostics to their request ([#7140](https://github.com/ismi9/rea/issues/7140)) ([6381aa0](https://github.com/ismi9/rea/commit/6381aa0b1dcb7092673db5ac739af57ce220ed37))
+* **inputs:** centralize admission and preserve caller selections ([ccdeda7](https://github.com/ismi9/rea/commit/ccdeda7a2779525e526f995be683ff91388e34f5))
+* **inspector:** route file locations through URL semantics ([c994870](https://github.com/ismi9/rea/commit/c994870f6bd8b10efcc516afd1fb0481e5cc9399))
+* **javascript:** bind defaulted and destructured Webpack factory roles ([#7117](https://github.com/ismi9/rea/issues/7117)) ([aa79f59](https://github.com/ismi9/rea/commit/aa79f59478c6a912823d18136d2e116a60f43bcd))
+* **javascript:** close member-path cycles through self stores ([#7131](https://github.com/ismi9/rea/issues/7131)) ([25f0f99](https://github.com/ismi9/rea/commit/25f0f9934d226caa62fb89d68e7bacad74f4fe73)), closes [#7130](https://github.com/ismi9/rea/issues/7130)
+* **javascript:** evaluate each short-circuit left operand once ([#7126](https://github.com/ismi9/rea/issues/7126)) ([81afb04](https://github.com/ismi9/rea/commit/81afb043f781676a15f0ce511c7784180e2224f7)), closes [#7115](https://github.com/ismi9/rea/issues/7115)
+* **javascript:** preserve selected inputs and completed source evidence ([721dd3d](https://github.com/ismi9/rea/commit/721dd3d1aa271b99feaf56559af6d3ed24cc101a))
+* **javascript:** stop recording replaced slot values as store receivers ([#7128](https://github.com/ismi9/rea/issues/7128)) ([70b96b6](https://github.com/ismi9/rea/commit/70b96b65d9a72296c7e427525e5c33da7bf3ec06))
+* **json:** consolidate dictionary admission across analysis and verification ([e7f986c](https://github.com/ismi9/rea/commit/e7f986c99485f48cb34d9e1d5cbf2f291a2d45ca))
+* **json:** preserve configuration and capture data at admission ([4ca3032](https://github.com/ismi9/rea/commit/4ca3032e7fe323bda8ad1a55af102ab99a5d39c1))
+* **kuna:** bind cached export reads to verified file state ([bf876ef](https://github.com/ismi9/rea/commit/bf876efbaa48a0e6edb515c65b0682175cb9441d))
+* **lldb:** keep the bridge's no-target proof through interruption ([#7111](https://github.com/ismi9/rea/issues/7111)) ([d32d9f2](https://github.com/ismi9/rea/commit/d32d9f29020e54b684dcf1a0f39c5b4d9e8637ce)), closes [#5385](https://github.com/ismi9/rea/issues/5385)
+* **macho:** derive the runtime name of each Mach-O symbol ([#7105](https://github.com/ismi9/rea/issues/7105)) ([a8e5eaf](https://github.com/ismi9/rea/commit/a8e5eaf1aa93a2611d1fa4c9b24c807f941e51c6)), closes [#5298](https://github.com/ismi9/rea/issues/5298)
+* **mcp:** advertise reduced array elements with Gemini-compatible item types ([#7107](https://github.com/ismi9/rea/issues/7107)) ([58a5275](https://github.com/ismi9/rea/commit/58a5275aa2247b961cb249ccbe4a98adbb706934)), closes [#5201](https://github.com/ismi9/rea/issues/5201)
+* **mcp:** fit every advertised input schema within the 64 KiB client limit ([#7119](https://github.com/ismi9/rea/issues/7119)) ([7336a56](https://github.com/ismi9/rea/commit/7336a566ace2f9d1412f78b0c56c2651b9b169cd))
+* **mcp:** return a compact binary_session status by default ([#7127](https://github.com/ismi9/rea/issues/7127)) ([5a22ae6](https://github.com/ismi9/rea/commit/5a22ae6bc8bae6cadd25aa5a6635a3c219d17b82))
+* **native:** retain completed debugger evidence through reply cleanup ([c06dc2d](https://github.com/ismi9/rea/commit/c06dc2d356f6bfb2f00aec33b295c41fe53f9e16))
+* **paths:** preserve native selections across launch and publication ([f2b4468](https://github.com/ismi9/rea/commit/f2b4468183e0c1fdc6dbf196283c580213cc7d73))
+* **paths:** preserve native selections through analysis and removal ([68f2d67](https://github.com/ismi9/rea/commit/68f2d67c56f283a750371c65fcd536af71ad2313))
+* **paths:** preserve native traversal and unset PATH semantics ([83a6cdb](https://github.com/ismi9/rea/commit/83a6cdb8596fdb2334862d512ca1b1be991fa4a6))
+* **paths:** preserve selected command, output, and source identities ([86ff323](https://github.com/ismi9/rea/commit/86ff3237e1d87715fccbfbfcde75402517376a99))
+* **process:** preserve environment snapshots and final cancellation ([e2d4c0d](https://github.com/ismi9/rea/commit/e2d4c0dabbcf1e9e0ee0249706eff906192e4188))
+* **process:** preserve platform-aware environment precedence ([628087a](https://github.com/ismi9/rea/commit/628087a2db9016b8f31b981a8642de5599e50ced))
+* **process:** preserve selected launch paths and completed command output ([eb51eb6](https://github.com/ismi9/rea/commit/eb51eb6915e16e88958058e56903bf6bc118240e))
+* **providers:** preserve native traversal in installation paths ([fa6112b](https://github.com/ismi9/rea/commit/fa6112b29f66669787e720759b99a25fe8956be6))
+* **providers:** preserve reply bytes and structured JSON ownership ([da526fc](https://github.com/ismi9/rea/commit/da526fc014b408ddef5b3faff246c622aeffddca))
+* **providers:** reject malformed UTF-8 before MCP decoding ([f8c5a6c](https://github.com/ismi9/rea/commit/f8c5a6cc10547e87bb7ad097d3a534a669a77d57))
+* **release:** reject missing manifest release boundaries ([bc14312](https://github.com/ismi9/rea/commit/bc143125edd223b7e0d315d5ea7efdc270c29f9e))
+* **runtime:** preserve exact selected target identities ([44b716f](https://github.com/ismi9/rea/commit/44b716f2f288ae3416e076d4aa5c2809533d1c7b))
+* **setup:** forward supported tool and runtime selections ([f498728](https://github.com/ismi9/rea/commit/f4987281fab32825501f6e7b1726c8e2fd2f25a8))
+* **setup:** preserve explicit Codex home traversal ([c849a97](https://github.com/ismi9/rea/commit/c849a97d2af5bd8bcee3da1ed11e3eef3e3516d3))
+* **setup:** preserve explicit configuration independently of readiness ([6819cc5](https://github.com/ismi9/rea/commit/6819cc5b8d0eced770f15b4eb8b3978eae6827cc))
+* **setup:** preserve native configuration path traversal ([14dd18a](https://github.com/ismi9/rea/commit/14dd18a7fdf3526a543ff0de7cea6d59bb73dae4))
+* **setup:** preserve selected home paths throughout skill installation ([f8161ad](https://github.com/ismi9/rea/commit/f8161ad7b31e636dd393e6b9cc1fe64a3de8a075))
+* **setup:** register explicit MCP runtimes and preserve launcher identity ([d69a54d](https://github.com/ismi9/rea/commit/d69a54d592e5fed1319f202bfe2991d0a7323d22))
+* **setup:** retain auxiliary tool selections in registrations ([b654ac8](https://github.com/ismi9/rea/commit/b654ac8b1339ed194a0672ee3469a2a5d04960a7))
+* **setup:** retain bounded startup diagnostics without losing failures ([db4d3ab](https://github.com/ismi9/rea/commit/db4d3abcda9be7c03cdc4cc97aa8f98b9cb49726))
+* **setup:** retain explicitly selected ILSpy paths ([82fe820](https://github.com/ismi9/rea/commit/82fe820060bfd3fac705b5840ebe660146252f22))
+* **skills:** parse metadata only from YAML frontmatter ([258a1dd](https://github.com/ismi9/rea/commit/258a1dd3b7d867264655e5a69e6364921e3d0c79))
+* **snapshot:** preserve authenticated replay provenance ([0c147a4](https://github.com/ismi9/rea/commit/0c147a4a7075b128c21c735df3d58a8a6d0a1a4f))
+* **sqlite:** preserve schema-owned input issue paths ([9e4702b](https://github.com/ismi9/rea/commit/9e4702b7a729fb2d25eb0469b6ac9d47ce7e7cde))
+* **sqlite:** retain completed evidence through reply finalization ([e596a48](https://github.com/ismi9/rea/commit/e596a48251a2fadd1bc173c1b3ba0ee2a4230a32))
+* unify executable format ownership across artifact readers ([7adfcc4](https://github.com/ismi9/rea/commit/7adfcc4467b2871712a19f73431d8298b6dfa177))
+* **update:** bound and own metadata probe lifetimes ([7404847](https://github.com/ismi9/rea/commit/7404847f641c5173a34e568b15ca7bcd6e22e8b6))
+* **verification:** keep runtime packaging and boundary fixtures complete ([86e7cd9](https://github.com/ismi9/rea/commit/86e7cd9b48171f1760abfa9a0952fff1d71666cf))
+* **verification:** unify client schema traversal and reference checks ([eecadf3](https://github.com/ismi9/rea/commit/eecadf35b20ac72d509513bef5949d36c887354d))
+* **verification:** unify complete MCP catalog checks ([2411d60](https://github.com/ismi9/rea/commit/2411d60b5af1453033fb97ca5cc22da055e6d9b3))
+* **wasm:** reuse canonical subject identity admission ([f4768eb](https://github.com/ismi9/rea/commit/f4768eb5d3581dfa3fd5c089e55d87825482b59c))
+* **website:** improve layout and clarify homepage copy ([a174892](https://github.com/ismi9/rea/commit/a174892e3e52b58e74df5b9f53ba4d0e0617177c))
+* **website:** surface RL environments and adjust homepage navigation ([ff6d96b](https://github.com/ismi9/rea/commit/ff6d96bce8c54dc8f0e2184bfcb397d99506dae2))
+
+
+### Performance Improvements
+
+* **native:** charge function matching for the copies it makes ([#7108](https://github.com/ismi9/rea/issues/7108)) ([cc2656b](https://github.com/ismi9/rea/commit/cc2656be8d8ff335283cc3d43910ca85ce519d29))
+
+
+### Code Refactoring
+
+* **artifacts:** reuse Mach-O framing for Node SEA discovery ([7439d0d](https://github.com/ismi9/rea/commit/7439d0d5d8b21274638a55387e99de4b35795fb8))
+* **asar:** let listing own parsed member facts ([85075fa](https://github.com/ismi9/rea/commit/85075fa9796fcb8c7231158744f4f2b0af2ff6b2))
+* **browser:** resolve Link metadata identity once ([5a332d8](https://github.com/ismi9/rea/commit/5a332d856a34e2d98db6a737086324062b0c53e7))
+* **browser:** reuse worker URL exclusion classification ([f6d9f1b](https://github.com/ismi9/rea/commit/f6d9f1b05c57c8685637cd9c4acabed2b2883084))
+* **capabilities:** remove inert client requirement facade ([634e566](https://github.com/ismi9/rea/commit/634e566c0925f0afed5cef47cc426eb811ad51c5))
+* **cdp:** centralize execution context identity parsing ([7ccecbc](https://github.com/ismi9/rea/commit/7ccecbcb0048ac760a6fba4d519497bddfcf193f))
+* centralize input validation and schema interpretation ([6c35d74](https://github.com/ismi9/rea/commit/6c35d74a7dbb0ea384274f2a9e5d84b439961614))
+* **cli:** derive desktop limits from the input contract ([36515a5](https://github.com/ismi9/rea/commit/36515a5c9b4e145ebc52e2b9de692ea6b3fb6320))
+* **cli:** share managed comparison finalization ([071a637](https://github.com/ismi9/rea/commit/071a637a9fd571a7a18e728edbf6929874ecd8ed))
+* **config:** remove legacy provider timeout re-exports ([7cd6527](https://github.com/ismi9/rea/commit/7cd65278ea941bcafaf5606600184c9f94f251a2))
+* **config:** share bounded decimal setting validation ([91bacc5](https://github.com/ismi9/rea/commit/91bacc5c14fe757d746fa66789e34da293d382b2))
+* **config:** use canonical resource limit constants ([23d56e1](https://github.com/ismi9/rea/commit/23d56e1abd9748d0d6eac88c2796a921a02418b0))
+* consolidate binary analysis admission and format ownership ([6336fe5](https://github.com/ismi9/rea/commit/6336fe5bb5ca19754d76017458198d1140cd0476))
+* consolidate binary artifact interpretation and fixture ownership ([9341b11](https://github.com/ismi9/rea/commit/9341b116efddefc2bcdd8208d27d6e4ea78cc507))
+* consolidate ELF and CLR record interpretation ([a7f50e3](https://github.com/ismi9/rea/commit/a7f50e338685781e7317a8d7659a79166736b269))
+* consolidate parsed image ownership across consumers ([8a65787](https://github.com/ismi9/rea/commit/8a657875079bc2644a1f6961447b730491e0d430))
+* **elf:** carry parsed header facts into native consumers ([ba7ac79](https://github.com/ismi9/rea/commit/ba7ac7908db2c2a8e05b75df032cb175ab069669))
+* **elf:** centralize fixed header type and flags decoding ([941838f](https://github.com/ismi9/rea/commit/941838fdd986babaac22a60b9c2c6c9f6ae329c3))
+* **elf:** centralize raw table declarations ([a7d71f4](https://github.com/ismi9/rea/commit/a7d71f47ee2a6b687af28220acab05f3345fdccd))
+* **elf:** centralize symbol record decoding ([90199ff](https://github.com/ismi9/rea/commit/90199ff0ec83a7bce39e4b01fb8b3f771bf3bfc0))
+* **evidence:** centralize publication source collection ([06655af](https://github.com/ismi9/rea/commit/06655af3061f75a0a295ed447ad96f592256f01b))
+* **firmware:** centralize extraction depth ceiling ([d9e12c9](https://github.com/ismi9/rea/commit/d9e12c957b1d948527498e4f69de2c65b160f710))
+* **godot:** share PCK header facts across inspections ([8982f40](https://github.com/ismi9/rea/commit/8982f40d00c365ee2ac43e715bd032cf850d6469))
+* **gpu:** reuse canonical ELF note layout ([d7d9457](https://github.com/ismi9/rea/commit/d7d9457661179d160e4c0a18bd5461901ef91d5a))
+* **il2cpp:** share generic container byte decoding ([b3818bb](https://github.com/ismi9/rea/commit/b3818bbba260125a6c618bacf2999854265e3010))
+* **javascript:** remove obsolete Electron classifier facade ([9fa5a87](https://github.com/ismi9/rea/commit/9fa5a87c73d2b3d70a3c0cd332986166b259bc12))
+* **macho:** centralize segment and section decoding ([981d806](https://github.com/ismi9/rea/commit/981d8069242f064bb41ace47f29bcbdd2dbcc508))
+* **macho:** reuse canonical header declarations ([0929751](https://github.com/ismi9/rea/commit/0929751798297d811d3e0441116d22140d88313e))
+* **macho:** share bounded header declarations ([0f64f1f](https://github.com/ismi9/rea/commit/0f64f1f85548de23600f1793f7ea8b4c63352297))
+* **macho:** share FAT evidence interpretation ([74f9870](https://github.com/ismi9/rea/commit/74f9870b7a49e5eadf13247c8b10fed5a352e85b))
+* **macho:** share header declarations across native readers ([ed7b3a2](https://github.com/ismi9/rea/commit/ed7b3a2a1006239466805cddff2d54c05503b890))
+* **managed:** retire redundant verification facade ([1fe1f1f](https://github.com/ismi9/rea/commit/1fe1f1f8d61f3c02fe5cafc9413fdec6201ffe11))
+* **mcp:** reuse desktop retained-summary handler ([971b48f](https://github.com/ismi9/rea/commit/971b48f702b16312ebaf73eeb433e4c9772e843e))
+* **model:** let format parsers own tensor range validation ([2be39ef](https://github.com/ismi9/rea/commit/2be39ef47acfbb10d2dfb84cffb097575eeb9a73))
+* **pe:** centralize fixed COFF header decoding ([b9ee8fe](https://github.com/ismi9/rea/commit/b9ee8fe05774570380659fba81cddb6be0a29576))
+* **pe:** centralize section header interpretation ([38ebe11](https://github.com/ismi9/rea/commit/38ebe11a525c387350f4a6eb795e580ee2f60034))
+* **pe:** reuse canonical section header facts ([53779b5](https://github.com/ismi9/rea/commit/53779b59bf1bcef002cba1bd09f5056fc203c8f0))
+* **pe:** share CodeView range interpretation ([92bdb44](https://github.com/ismi9/rea/commit/92bdb4443faa8d7dae128e3368b17e4ad2042acb))
+* **pe:** share optional header image and alignment facts ([5c4a6c4](https://github.com/ismi9/rea/commit/5c4a6c467cf8766071383e57de19edca005506a6))
+* **pe:** share optional-header facts across readers ([deed39f](https://github.com/ismi9/rea/commit/deed39f7c4bf7617e79bbf0bebabcd4e5c869664))
+* **png:** share IHDR interpretation ([729684a](https://github.com/ismi9/rea/commit/729684af9aacd93f4ad35e3378b371e05eb68def))
+* **reconstruction:** share canonical original cases across evaluation ([60daca4](https://github.com/ismi9/rea/commit/60daca427d7713479ea4c82c4775ee57b95065aa))
+* **reference:** derive import lookup from reader inventory ([943ae60](https://github.com/ismi9/rea/commit/943ae604df4da5e9d1f5ea7e43a2a510b6a4c828))
+* **services:** centralize direct provider input admission ([fab7850](https://github.com/ismi9/rea/commit/fab78501c77e09473d265003e3e94bc4309dbfd7))
+* **snapshots:** derive workflow entries from canonical schema ([72fa15a](https://github.com/ismi9/rea/commit/72fa15a509fcdd4779ad58f19d0c03d06b350747))
+* **tooling:** move completion ledger generation out of domain ([8fe3b17](https://github.com/ismi9/rea/commit/8fe3b17ea7cc3bf6a8cd58ec2dd5f002c74cb801))
+* **tooling:** move verifier host helpers out of runtime ([42f3ed7](https://github.com/ismi9/rea/commit/42f3ed7119256da95bb9e569c8cb0c34edf8d853))
+* **verification:** centralize native client result discovery ([554816b](https://github.com/ismi9/rea/commit/554816becc41a91a2a2ee7bbe7c2b1d3abfe4296))
+* **verification:** share native client fixture assertions ([f4cc6c8](https://github.com/ismi9/rea/commit/f4cc6c85efe7f3513d587df3bd5086adb1bc6a76))
+* **web:** reuse shared provider input admission ([6362ac6](https://github.com/ismi9/rea/commit/6362ac6b72d04247f8a9ae8677f22d6e23dd9e29))
+* **windows:** share native artifact validation ([3d565fa](https://github.com/ismi9/rea/commit/3d565fa42a4a3d8bff65d3662cfb814bc9074734))
+* **workflows:** share source caveat grouping identity ([5e581fd](https://github.com/ismi9/rea/commit/5e581fd3b12e78a2727c061185bb5c680eb36084))
+* **zip:** share end-of-directory declarations ([2822208](https://github.com/ismi9/rea/commit/28222089f499839716d91db2ebbac5c87b544adf))
+
+
+### Documentation
+
+* **environments:** explain building RL environments with REA ([447907f](https://github.com/ismi9/rea/commit/447907f2808877d3a7de62c382e256f55d08e5ac))
+* **environments:** lead with agent prompts ([a0ddb83](https://github.com/ismi9/rea/commit/a0ddb83e453aab10163dea75f514d3cc7a1c95d5))
+* scope performance measurements to concrete needs ([90b793e](https://github.com/ismi9/rea/commit/90b793e0f488be73a3e98ba430bcb132ad8b0c31))
+* **setup:** state the FreeBuff minimum release ([#7066](https://github.com/ismi9/rea/issues/7066)) ([975900f](https://github.com/ismi9/rea/commit/975900f56542fdff2bdafcd624038a261b0e9f21))
+* **website:** showcase RL environment workflows ([14631f6](https://github.com/ismi9/rea/commit/14631f698da79b71e9512752529615d6388e87c9))
+
+
+### Tests
+
+* **mcp:** validate selected tools without compiling the entire catalog ([cc5a969](https://github.com/ismi9/rea/commit/cc5a96933aaae4738289c349c8720037c7b45590))
+* **package:** migrate skill metadata fixture to frontmatter ([23bc51d](https://github.com/ismi9/rea/commit/23bc51d5c48306ef91cc6f1766783bc89e18293d))
+* **providers:** verify malformed HTTP acquisition recovery ([ce5373e](https://github.com/ismi9/rea/commit/ce5373e42f119f47b5c91759fe00d7a79e96cde7))
+* **setup:** align launch fixtures with runtime and host requirements ([1173c0a](https://github.com/ismi9/rea/commit/1173c0a9dc1b352a60943a491462294db8f353ae))
+
 ## [6.8.0](https://github.com/morluto/rea/compare/rea-agents-6.7.0...rea-agents-6.8.0) (2026-10-25)
 
 ### Highlights
